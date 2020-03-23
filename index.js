@@ -27,7 +27,7 @@ function addNumbers(num1, num2) {
  * ### Challenge `sayGoodbye`
  * 
  * @instructions
- * This function should take an a name as an argument,
+ * This function should take a name as an argument,
  * and return a string that says 'Goodbye, {name}. Have a great day.'
  * 
  * For example, if we invoke `sayGoodbye`
@@ -35,17 +35,15 @@ function addNumbers(num1, num2) {
  * the returned value should look like: 'Goodbye, Andy. Have a great day.'
  * 
 */
-function sayGoodbye(/* code here */) {
-  /* code here */
+function sayGoodbye(name) {
+  return 'Goodbye, ' + name +'. Have a great day.';
 }
-
 /**
  * ### Challenge `temperatureCtoF`
  * 
  * @instructions
  * This function should take an a temperature in celsius as an argument,
  * and return the temperature in fahrenheit, rounded to the nearest whole number. 
- * 
  * For example, if we invoke `temperatureCtoF`
  * passing 24 as the argument,
  * the returned value should be: 75
@@ -53,8 +51,10 @@ function sayGoodbye(/* code here */) {
  * Hint 1: The formula for converting celsius to fahrenheit is t*9/5 + 32 where t is the temperature in celsius.
  * Hint 2: There is a very easy way to round numbers in JS. Do a google search to find out how. 
 */
-function temperatureCtoF(/* code here */) {
-  /* code here */
+function temperatureCtoF(celsius) { 
+  let fahrenheit;
+  fahrenheit = Math.round(celsius * (9/5)) + 32;
+  return fahrenheit;
 }
 
 /**
@@ -74,8 +74,9 @@ function temperatureCtoF(/* code here */) {
  * 
  * Hint: You can call your `temperatureCtoF` function from inside `temperatureInF`.
 */
-function temperatureInF(/* code here */) {
-  /* code here */
+function temperatureInF(F, C) {
+  return Math.round(F +'F');
+  return Math.round(temperatureCtoF() + 'F');
 }
 
 
@@ -95,7 +96,7 @@ function temperatureInF(/* code here */) {
  *   email: "leia@leia.com",
  * }
 */
-function makePersonObject(/* code here */) {
+function makePersonObject(person) {
   /* code here */
 }
 
