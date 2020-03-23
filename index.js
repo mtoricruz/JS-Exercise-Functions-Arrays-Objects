@@ -74,9 +74,13 @@ function temperatureCtoF(celsius) {
  * 
  * Hint: You can call your `temperatureCtoF` function from inside `temperatureInF`.
 */
-function temperatureInF(F, C) {
-  return Math.round(F +'F');
-  return Math.round(temperatureCtoF() + 'F');
+function temperatureInF(degreesIn1, degreesIn2) {
+  if (degreesIn2 === 'F'){
+    return degreesIn1 + degreesIn2
+  } else if (degreesIn2 === 'C'){
+    const tempInC = temperatureCtoF(degreesIn1) + 'F';
+    return tempInC
+  };
 }
 
 
@@ -96,8 +100,13 @@ function temperatureInF(F, C) {
  *   email: "leia@leia.com",
  * }
 */
-function makePersonObject(person) {
-  /* code here */
+function makePersonObject(id, name, email) {
+  var person = {
+    id: id,
+    name: name,
+    email: email,
+  };
+  return person;
 }
 
 /**
@@ -113,11 +122,9 @@ function makePersonObject(person) {
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
 */
-function getName(/* code here */) {
-  /* code here */
+function getName(person) {
+  return 'Hello, my name is ' + person.name;
 }
-
-
 /**
  * ### Challenge `appleIndex`
  * 
@@ -133,8 +140,8 @@ function getName(/* code here */) {
  * passing in [ 'orange', 'grape', 'apple', 'banana', 'mango' ] as the argument,
  * the returned value should be: 2.
 */
-function appleIndex(/* code here */) {
-  /* code here */
+function appleIndex(fruit) {
+  return fruit.indexOf('apple')
 }
 
 /**
